@@ -65,5 +65,14 @@ class Users{
   String get age => _age;
   String get quote => _quote;
 
+  void setUsers(id, userid, name, age, password, quote){
+    this._id = id;
+    this._userid = userid;
+    this._name = name;
+    this._age = age;
+    this._password = password;
+    this._quote = quote; 
+  }
+
   Users();
 }

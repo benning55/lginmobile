@@ -3,13 +3,13 @@ import 'package:real_final_mobile/models/Users.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'LogIn.dart';
+import 'Profile.dart';
 
 class Home extends StatefulWidget{
 
   List<Users> all_user = new List();
   Users userInfo;
   Home(this.userInfo, this.all_user);
-
 
 
   @override
@@ -32,6 +32,10 @@ class HomeState extends State<Home>{
         "PROFILE SETUP"
       ),
       onPressed: (){
+        Navigator.push(context, 
+          MaterialPageRoute(
+          builder: (context) => Profile(userInfo, all_user)
+        ));
       },
       color: Theme.of(context).accentColor,
     );
